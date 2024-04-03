@@ -1,12 +1,13 @@
-import CategoryGrid from "@/components/category/CategoryGrid";
-import Container from "@/components/shared/Container";
-import Header from "@/components/shared/Header";
+import Container from "../shared/Container";
+import Header from "../shared/Header";
+import CategoryGrid from "./CategoryGrid";
 
-export default async function Categories() {
+export default async function HomeCategory() {
   const res = await fetch("http://localhost:5000/categories");
   const data = await res.json();
+
   return (
-    <Container>
+    <Container bgColor={false}>
       <Header
         heading="Categories"
         subHeading="Explore Our Diverse Range of Categories"

@@ -1,5 +1,6 @@
-import HomeSlider from "@/components/HomeSlider";
+import HomeCategory from "@/components/category/HomeCategory";
 import HomeFlashSaleItem from "@/components/flashSale/FlashSale";
+import HomeSlider from "@/components/home/HomeSlider";
 
 export default async function Home() {
   const res = await fetch("http://localhost:5000/hero-items", {
@@ -10,6 +11,7 @@ export default async function Home() {
     <main>
       <HomeSlider data={data.data} />
       <HomeFlashSaleItem />
+      <HomeCategory />
     </main>
   );
 }

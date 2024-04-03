@@ -1,6 +1,7 @@
+import { TProductItem } from "@/types";
 import Image from "next/image";
 
-export default function FlashSaleProductCard({ item }) {
+export default function FlashSaleProductCard({ item }: { item: TProductItem }) {
   const { _id, productName, image, description, price, flashSale } = item;
   return (
     <div className="card  bg-base-100 shadow-xl">
