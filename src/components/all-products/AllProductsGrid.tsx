@@ -1,8 +1,8 @@
 import { TProductItem } from "@/types";
-import Card from "../card/Card";
 import Grid from "../shared/Grid";
+import Card from "../card/Card";
 
-export default function FlashSaleGrid({ items }: { items: TProductItem[] }) {
+export default function AllProductsGrid({ items }: { items: TProductItem[] }) {
   return (
     <Grid>
       {items.map((item: TProductItem) => (

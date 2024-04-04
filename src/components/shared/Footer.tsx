@@ -1,3 +1,5 @@
+import Link from "next/link";
+
 export default function Footer() {
   return (
     <footer className="footer p-10 bg-base-200 text-base-content">
@@ -20,18 +22,34 @@ export default function Footer() {
         </p>
       </aside>
       <nav>
-        <h6 className="footer-title">Services</h6>
-        <a className="link link-hover">Branding</a>
-        <a className="link link-hover">Design</a>
-        <a className="link link-hover">Marketing</a>
-        <a className="link link-hover">Advertisement</a>
+        <h6 className="footer-title">Useful Links</h6>
+        <Link href={"/home"} className="link link-hover">
+          Home
+        </Link>
+        <Link href={"/categories"} className="link link-hover">
+          Categories
+        </Link>
+        <Link href={"/flash-sale"} className="link link-hover">
+          Flash Sale
+        </Link>
+        <Link href={"/products"} className="link link-hover">
+          Products
+        </Link>
       </nav>
       <nav>
         <h6 className="footer-title">Company</h6>
-        <a className="link link-hover">About us</a>
-        <a className="link link-hover">Contact</a>
-        <a className="link link-hover">Jobs</a>
-        <a className="link link-hover">Press kit</a>
+        <Link href={"/about"} className="link link-hover">
+          About
+        </Link>
+        <Link href={"/contact"} className="link link-hover">
+          Contact
+        </Link>
+        <Link href={"/"} className="link link-hover">
+          Jobs
+        </Link>
+        <Link href={"/"} className="link link-hover">
+          Customer Care
+        </Link>
       </nav>
       <nav>
         <h6 className="footer-title">Legal</h6>

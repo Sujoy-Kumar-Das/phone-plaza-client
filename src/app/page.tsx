@@ -1,3 +1,4 @@
+import AllProducts from "@/components/all-products/AllProducts";
 import HomeCategory from "@/components/category/HomeCategory";
 import HomeFlashSaleItem from "@/components/flashSale/FlashSale";
 import HomeSlider from "@/components/home/HomeSlider";
@@ -12,6 +13,7 @@ export default async function Home() {
       <HomeSlider data={data.data} />
       <HomeFlashSaleItem />
       <HomeCategory />
+      <AllProducts />
     </main>
   );
 }

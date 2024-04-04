@@ -2,8 +2,11 @@ export type TProductItem = {
   _id: string;
   brand: string;
   productName: string;
+  originalPrice: number;
+  flashSalePrice: number;
+  discount: number;
   description: string;
-  price: number;
   flashSale: boolean;
   image: string;
+  rating: number;
 };
