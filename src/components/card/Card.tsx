@@ -1,5 +1,6 @@
 import { TProductItem } from "@/types";
 import Image from "next/image";
+import Link from "next/link";
 import Rating from "../shared/Rating";
 
 export default function Card({ item }: { item: TProductItem }) {
@@ -44,8 +45,10 @@ export default function Card({ item }: { item: TProductItem }) {
           </p>
         </div>
         <div className="card-actions justify-end">
-          <button className=" btn btn-primary">Buy Now</button>
-          <button className=" btn btn-secondary btn-outline">Detail</button>
+          <button className=" btn btn-primary">Add to cart</button>
+          <Link href={`/products/${_id}`}>
+            <button className=" btn btn-secondary btn-outline">Detail</button>
+          </Link>
         </div>
       </div>
     </div>

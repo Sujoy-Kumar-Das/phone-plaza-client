@@ -13,7 +13,7 @@ export default function CategoryCard({ item }: { item: TCategory }) {
         <h2 className="card-title">{name}</h2>
         <p>{description}</p>
         <div className="card-actions justify-end">
-          <Link href={`/products/${name}`}>
+          <Link href={`/categories/${name}`}>
             <button className="btn btn-primary">Show Products</button>
           </Link>
         </div>
