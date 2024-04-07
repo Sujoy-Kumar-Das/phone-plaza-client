@@ -20,5 +20,8 @@ export const navLinks = (
     <li>
       <Link href={"/contact-us"}>Contact Us</Link>
     </li>
+    <li>
+      <Link href={"/dashboard/all-products"}>Dashboard</Link>
+    </li>
   </>
 );
