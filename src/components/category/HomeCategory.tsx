@@ -10,10 +10,7 @@ export default async function HomeCategory() {
 
   return (
     <Container bgColor={false}>
-      <Header
-        heading="Categories"
-        subHeading="Explore Our Diverse Range of Categories"
-      />
+      <Header>Categories</Header>
 
       {/* category items gird */}
 

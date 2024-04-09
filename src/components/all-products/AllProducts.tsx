@@ -1,7 +1,8 @@
-import Link from "next/link";
+import { FaArrowAltCircleRight } from "react-icons/fa";
 import Container from "../shared/Container";
 import Header from "../shared/Header";
-import AllProductsGrid from "./AllProductsGrid";
+import AllProductSwiper from "./AllProductSwiper";
+import Link from "next/link";
 
 export default async function AllProducts() {
   const res = await fetch("http://localhost:5000/products?limit=6", {
@@ -13,18 +14,19 @@ export default async function AllProducts() {
 
   return (
     <Container>
-      <Header
-        heading="Trending Products"
-        subHeading="Discover the Latest and Most Popular Smartphone Models"
-      />
-
-      <AllProductsGrid items={data.data} />
-
-      <div className=" flex justify-center mt-10">
-        <Link href={"/products"}>
-          <button className=" btn btn-primary btn-md">See All</button>
+      <div className=" flex justify-between items-center">
+        <Header>Trending Products</Header>
+        <Link
+          href={"/products"}
+          className=" btn btn-outline btn-primary btn-md capitalize"
+        >
+          <span>See all products</span>{" "}
+          <span>
+            <FaArrowAltCircleRight />
+          </span>
         </Link>
       </div>
+      <AllProductSwiper items={data.data} />
     </Container>
   );
 }

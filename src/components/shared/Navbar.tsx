@@ -2,28 +2,6 @@ import Link from "next/link";
 import { navLinks } from "./NavLinks";
 
 export default function Navbar() {
-  // const navItems = (
-  //   <>
-  //     <li>
-  //       <Link href={"/"}>Home</Link>
-  //     </li>
-  //     <li>
-  //       <Link href={"/"}>Categories</Link>
-  //     </li>
-  //     <li>
-  //       <Link href={"/"}>Products</Link>
-  //     </li>
-  //     <li>
-  //       <Link href={"/"}>Flash Sale</Link>
-  //     </li>
-  //     <li>
-  //       <Link href={"/"}>About Us</Link>
-  //     </li>
-  //     <li>
-  //       <Link href={"/"}>Contact Us</Link>
-  //     </li>
-  //   </>
-  // );
   return (
     <nav className="bg-base-300">
       <div className="navbar max-w-7xl mx-auto">
@@ -46,8 +24,8 @@ export default function Navbar() {
               </svg>
             </div>
             <ul
-              tabIndex={0}
-              className="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52"
+              tabIndex={1}
+              className="menu menu-sm dropdown-content mt-3 p-2 shadow bg-base-100 rounded-box w-[200px] z-10"
             >
               {navLinks}
             </ul>
@@ -60,7 +38,7 @@ export default function Navbar() {
           <ul className="menu menu-horizontal px-1">{navLinks}</ul>
         </div>
         <div className="navbar-end">
-          <a className="btn">Button</a>
+          <a className="btn">Login</a>
         </div>
       </div>
     </nav>

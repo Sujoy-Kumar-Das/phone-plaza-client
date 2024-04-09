@@ -8,7 +8,7 @@ export default function Container({
   bgColor?: boolean;
 }) {
   return (
-    <section className={`${bgColor ? "bg-gray-300" : "bg-white"}`}>
+    <section className={`${bgColor ? "bg-base-300" : "bg-base-200"}`}>
       <div className={`mx-auto max-w-7xl pb-10 pt-20 md:px-0 px-3`}>
         {children}
       </div>

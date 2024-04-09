@@ -35,12 +35,9 @@ export default function Products() {
 
   return (
     <Container>
-      <div className="flex justify-between">
-        <Header
-          heading="Trending Products"
-          subHeading="Discover the Latest and Most Popular Smartphone Models"
-        />
-        <label className="form-control w-full max-w-xs">
+      <div className="flex justify-between items-center">
+        <Header>Trending Products</Header>
+        <label className="form-control w-full max-w-xs mb-10">
           <div className="label">
             <span className="label-text">Filter By Brand</span>
           </div>

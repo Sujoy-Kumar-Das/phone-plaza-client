@@ -20,10 +20,7 @@ export default async function ProductCategory({
   const data = await res.json();
   return (
     <Container>
-      <Header
-        heading="Categories"
-        subHeading="Explore Our Diverse Range of Categories"
-      />
+      <Header>Products</Header>
 
       <FlashSaleGrid items={data.data} />
     </Container>

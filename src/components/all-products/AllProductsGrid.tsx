@@ -1,12 +1,12 @@
 import { TProductItem } from "@/types";
+import TrendingCard from "../card/TrendingCard";
 import Grid from "../shared/Grid";
-import Card from "../card/Card";
 
 export default function AllProductsGrid({ items }: { items: TProductItem[] }) {
   return (
     <Grid>
       {items.map((item: TProductItem) => (
-        <Card key={item._id} item={item} />
+        <TrendingCard item={item} key={item._id} />
       ))}
     </Grid>
   );

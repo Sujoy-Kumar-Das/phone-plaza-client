@@ -1,6 +1,6 @@
 import FlashSaleGrid from "@/components/flashSale/FlashSaleGrid";
+import FlashSaleHeading from "@/components/flashSale/FlashSaleHeading";
 import Container from "@/components/shared/Container";
-import Header from "@/components/shared/Header";
 
 export default async function FlashSalePage() {
   const res = await fetch("http://localhost:5000/flash-sale", {
@@ -11,7 +11,7 @@ export default async function FlashSalePage() {
   const data = await res.json();
   return (
     <Container>
-      <Header heading="Flash Sale" subHeading="Stock is limited. Hurry up!" />
+      <FlashSaleHeading />
       <FlashSaleGrid items={data.data} />
     </Container>
   );

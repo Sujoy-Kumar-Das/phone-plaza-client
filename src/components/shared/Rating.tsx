@@ -9,7 +9,7 @@ export default function Ratting({ rating }: { rating: number }) {
           viewBox="0 0 24 24"
           strokeWidth={1.5}
           stroke={index < rating ? "#FFD700" : "#CCCCCC"}
-          className="w-6 h-6"
+          className="w-6 h-6 hover:scale-150 duration-700"
         >
           <path
             strokeLinecap="round"

@@ -1,7 +1,7 @@
 import Link from "next/link";
 import Container from "../shared/Container";
-import Header from "../shared/Header";
 import FlashSaleGrid from "./FlashSaleGrid";
+import FlashSaleHeading from "./FlashSaleHeading";
 
 export default async function HomeFlashSaleItem() {
   const res = await fetch("http://localhost:5000/flash-sale?limit=6", {
@@ -12,11 +12,7 @@ export default async function HomeFlashSaleItem() {
   const data = await res.json();
   return (
     <Container>
-      <Header
-        heading="Flash Sale"
-        subHeading="Quick Flash Sale for Gadgets on the Go!"
-      />
-
+      <FlashSaleHeading />
       {/* flash sale grid for new six flash sale items */}
       <FlashSaleGrid items={data.data} />
 

@@ -9,10 +9,7 @@ export default async function Categories() {
   const data = await res.json();
   return (
     <Container>
-      <Header
-        heading="Categories"
-        subHeading="Explore Our Diverse Range of Categories"
-      />
+      <Header>Categories</Header>
 
       {/* category items gird */}
 
