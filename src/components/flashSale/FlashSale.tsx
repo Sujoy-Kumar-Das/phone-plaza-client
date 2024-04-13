@@ -4,7 +4,7 @@ import FlashSaleGrid from "./FlashSaleGrid";
 import FlashSaleHeading from "./FlashSaleHeading";
 
 export default async function HomeFlashSaleItem() {
-  const res = await fetch("http://localhost:5000/flash-sale?limit=6", {
+  const res = await fetch("http://localhost:5000/flash-sale?limit=8", {
     next: {
       revalidate: 30,
     },

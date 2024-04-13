@@ -5,7 +5,7 @@ export default function AllProductsTable({ items }: { items: TProductItem[] }) {
   return (
     <div className="overflow-x-auto">
       <table className="table">
-        <thead>
+        <thead className=" text-textPrimary">
           <tr>
             <th>#</th>
             <th>Image</th>
@@ -16,7 +16,7 @@ export default function AllProductsTable({ items }: { items: TProductItem[] }) {
             <th>Delete</th>
           </tr>
         </thead>
-        <tbody>
+        <tbody className=" text-textSecondary">
           {items.map((item, index) => (
             <tr key={item._id}>
               <th>{index + 1}</th>

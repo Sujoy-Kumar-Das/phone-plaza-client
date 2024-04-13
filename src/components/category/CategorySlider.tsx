@@ -1,9 +1,9 @@
 "use client";
-import { TProductItem } from "@/types";
+import { TCategory } from "@/types";
 import { Autoplay, Navigation, Pagination } from "swiper/modules";
 import { Swiper, SwiperSlide } from "swiper/react";
-import Card from "../card/Card";
-export default function AllProductSwiper({ items }: { items: TProductItem[] }) {
+import CategoryCard from "./CategoryCard";
+export default function CategorySlider({ items }: { items: TCategory[] }) {
   return (
     <Swiper
       autoplay={{
@@ -11,24 +11,25 @@ export default function AllProductSwiper({ items }: { items: TProductItem[] }) {
         disableOnInteraction: false,
       }}
       modules={[Autoplay, Pagination, Navigation]}
+      navigation={true}
       breakpoints={{
         640: {
           slidesPerView: 1,
           spaceBetween: 10,
         },
         768: {
-          slidesPerView: 3,
+          slidesPerView: 2,
           spaceBetween: 20,
         },
         1024: {
-          slidesPerView: 4,
+          slidesPerView: 3,
           spaceBetween: 30,
         },
       }}
     >
       {items?.map((item) => (
         <SwiperSlide key={item._id}>
-          <Card item={item} />
+          <CategoryCard item={item} />
         </SwiperSlide>
       ))}
     </Swiper>

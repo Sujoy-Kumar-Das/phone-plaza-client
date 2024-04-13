@@ -1,20 +1,22 @@
 import Container from "../shared/Container";
 import Header from "../shared/Header";
-import CategoryGrid from "./CategoryGrid";
+import Button from "../ui/Button";
+import CategorySlider from "./CategorySlider";
 
 export default async function HomeCategory() {
   const res = await fetch("http://localhost:5000/categories", {
-    cache: "force-cache",
+    cache: "no-store",
   });
   const data = await res.json();
 
   return (
     <Container bgColor={false}>
-      <Header>Categories</Header>
+      <Header text="see all category" link="/categories">
+        Categories
+      </Header>
 
-      {/* category items gird */}
-
-      <CategoryGrid items={data.data} />
+      {/* category items slider */}
+      <CategorySlider items={data.data} />
     </Container>
   );
 }

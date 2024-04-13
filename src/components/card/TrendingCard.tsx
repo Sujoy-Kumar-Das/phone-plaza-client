@@ -21,10 +21,10 @@ export default function TrendingCard({ item }: { item: TProductItem }) {
     <div className="card bg-base-100 shadow-xl relative group overflow-hidden ">
       <div
         className={` flex self-end m-2 ${
-          flashSale ? "badge badge-secondary" : "hidden"
+          flashSale ? "badge badge-primary" : "badge badge-secondary"
         }`}
       >
-        {flashSale && "Flash Sale"}
+        {flashSale ? "Flash Sale" : "Premium"}
       </div>
       <figure>
         <Image
@@ -34,7 +34,7 @@ export default function TrendingCard({ item }: { item: TProductItem }) {
           height={200}
         />
       </figure>
-      <div className="bg-base-200 pb-1 rounded-b-lg group overflow-hidden">
+      <div className="bg-base-200 pb-1 rounded-b-lg group overflow-hidden ">
         {/* card body div */}
         <div className="card-body text-center pt-3 group-hover:-translate-y-[500px] translate-y-0 duration-700 ease-in-out">
           <h2 className="text-textPrimary font-light">{brand}</h2>
@@ -56,7 +56,7 @@ export default function TrendingCard({ item }: { item: TProductItem }) {
             <p className="text-textPrimary hover:text-primary text-textPrimary text-2xl hover:scale-150 duration-700">
               <FaRegHeart />
             </p>
-            <button className="btn btn-primary btn-sm btn-outline">
+            <button className="btn btn-primary btn-sm btn-outline group2">
               Add to cart
             </button>
             <Link

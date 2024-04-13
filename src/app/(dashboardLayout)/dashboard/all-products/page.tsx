@@ -11,8 +11,10 @@ export default async function AllProducts() {
   const data = await res.json();
   return (
     <Container>
-      <Header heading="All Products" subHeading="" />
-      <AllProductsTable items={data.data} />
+      <div className=" px-5">
+        <Header>All Products</Header>
+        <AllProductsTable items={data.data} />
+      </div>
     </Container>
   );
 }

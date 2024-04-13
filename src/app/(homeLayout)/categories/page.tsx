@@ -12,7 +12,6 @@ export default async function Categories() {
       <Header>Categories</Header>
 
       {/* category items gird */}
-
       <CategoryGrid items={data.data} />
     </Container>
   );

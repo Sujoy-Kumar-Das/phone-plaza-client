@@ -47,19 +47,39 @@ export default function FlashSaleTimeEnd() {
   };
 
   return (
-    <div className="flex items-center mb-10 w-full max-w-xs">
+    <div className="flex justify-start lg:justify-end items-center mb-10 w-full lg:w-2/5">
       {endTime && (
         <div className="flex items-center">
           <p className="font-bold mr-2 text-textPrimary">Ends Offer:</p>
           <div className="flex items-center">
-            <div className="bg-primary  px-3 py-1 text-textPrimary rounded-sm mr-2">
-              {formatTime(endTime).hours}h
+            <div className="bg-primary px-3 py-1 text-textPrimary rounded-sm mr-2">
+              {`${formatTime(endTime).days > 0 ? formatTime(endTime).days : 0}`}
+              d
             </div>
-            <div className="bg-primary text-white px-3 py-1 rounded-sm mr-2">
-              {formatTime(endTime).minutes}m
+
+            <div className="bg-primary px-3 py-1 text-textPrimary rounded-sm mr-2">
+              {`${
+                formatTime(endTime).hours > 0 ? formatTime(endTime).hours : 0
+              }`}
+              h
             </div>
-            <div className=" bg-primary text-textPrimary px-3 py-1 rounded-sm">
-              {formatTime(endTime).seconds}s
+
+            <div className="bg-primary px-3 py-1 text-textPrimary rounded-sm mr-2">
+              {`${
+                formatTime(endTime).minutes > 0
+                  ? formatTime(endTime).minutes
+                  : 0
+              }`}
+              m
+            </div>
+
+            <div className="bg-primary px-3 py-1 text-textPrimary rounded-sm mr-2">
+              {`${
+                formatTime(endTime).seconds > 0
+                  ? formatTime(endTime).seconds
+                  : 0
+              }`}
+              s
             </div>
           </div>
         </div>

@@ -8,12 +8,11 @@ export default async function ProductCategory({
   params: { category: string };
 }) {
   const { category } = params;
-  console.log(category);
   const res = await fetch(
     `http://localhost:5000/categories?category=${category}`,
     {
       next: {
-        revalidate: 1,
+        revalidate: 30,
       },
     }
   );

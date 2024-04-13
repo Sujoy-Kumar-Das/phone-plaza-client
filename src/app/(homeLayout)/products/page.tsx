@@ -36,7 +36,9 @@ export default function Products() {
   return (
     <Container>
       <div className="flex justify-between items-center">
-        <Header>Trending Products</Header>
+        <div className=" w-full lg:w-1/2">
+          <Header>Trending Products</Header>
+        </div>
         <label className="form-control w-full max-w-xs mb-10">
           <div className="label">
             <span className="label-text">Filter By Brand</span>
