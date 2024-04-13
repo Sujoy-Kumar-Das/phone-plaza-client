@@ -52,7 +52,7 @@ export default function HomeSliderCard({
           visible: { opacity: 1, scale: 1 },
         }}
         transition={{ duration: 0.5, ease: "easeInOut" }}
-        className="w-full lg:w-1/2"
+        className="w-full lg:w-1/2 flex justify-center"
       >
         <motion.div
           initial={{ opacity: 0 }}

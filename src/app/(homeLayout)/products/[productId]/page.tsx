@@ -9,7 +9,7 @@ export default async function ProductDetails({
   params: { productId: string };
 }) {
   const { productId: id } = params;
-  const res = await fetch(`http://localhost:5000/products/${id}`);
+  const res = await fetch(`https://backend-rosy-chi.vercel.app/products/${id}`);
   const data = await res.json();
 
   const {

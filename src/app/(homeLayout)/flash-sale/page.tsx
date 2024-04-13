@@ -3,7 +3,7 @@ import FlashSaleHeading from "@/components/flashSale/FlashSaleHeading";
 import Container from "@/components/shared/Container";
 
 export default async function FlashSalePage() {
-  const res = await fetch("http://localhost:5000/flash-sale", {
+  const res = await fetch("https://backend-rosy-chi.vercel.app/flash-sale", {
     next: {
       revalidate: 30,
     },

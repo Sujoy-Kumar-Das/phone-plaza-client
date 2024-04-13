@@ -11,7 +11,7 @@ export default function Products() {
 
   const fetchData = async () => {
     try {
-      const res = await fetch("http://localhost:5000/products");
+      const res = await fetch("https://backend-rosy-chi.vercel.app/products");
       const data = await res.json();
       setData(data.data);
       setFilteredData(data.data);

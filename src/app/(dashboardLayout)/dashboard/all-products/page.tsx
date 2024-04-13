@@ -3,7 +3,7 @@ import Container from "@/components/shared/Container";
 import Header from "@/components/shared/Header";
 
 export default async function AllProducts() {
-  const res = await fetch("http://localhost:5000/products", {
+  const res = await fetch("https://backend-rosy-chi.vercel.app/products", {
     next: {
       revalidate: 30,
     },

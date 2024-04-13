@@ -3,7 +3,7 @@ import Container from "@/components/shared/Container";
 import Header from "@/components/shared/Header";
 
 export default async function Categories() {
-  const res = await fetch("http://localhost:5000/categories", {
+  const res = await fetch("https://backend-rosy-chi.vercel.app/categories", {
     cache: "force-cache",
   });
   const data = await res.json();

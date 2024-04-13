@@ -9,7 +9,7 @@ export default async function ProductCategory({
 }) {
   const { category } = params;
   const res = await fetch(
-    `http://localhost:5000/categories?category=${category}`,
+    `https://backend-rosy-chi.vercel.app/categories?category=${category}`,
     {
       next: {
         revalidate: 30,
