@@ -1,27 +1,21 @@
-# MobilePlaza (A online mobile shop app)
+# UIFRI Web app
 
 ## Live :- https://frontend-three-mu-49.vercel.app/
 
-## Server :https://backend-rosy-chi.vercel.app/
+## Server Live :https://backend-rosy-chi.vercel.app/
 
-## Features
-
-- Simple and minimalistic UI with fully responsive for all devices.
-- Implemented File-Based Routing system of next js.
-- user can filter based on brand.
-- Implemented dynamic routing for show product detail and category products.
+## Server Code : https://github.com/Sujoy-Kumar-Das/uiFry-backend
 
 ## Technology
 
 - Typescript
 - Next js
-- Framer motion
 
 ## How to use?
 
 - Clone Project
   ```
-  https://github.com/Sujoy-Kumar-Das/phone-plaza-client
+  https://github.com/Sujoy-Kumar-Das/uiFri-frontend
   ```
 - Install required npm packages
 
